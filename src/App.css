@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.item {
+  font-size: small;
+}
+
+td {
+  border: 2px solid grey;
+}
