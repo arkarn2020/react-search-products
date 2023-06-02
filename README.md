@@ -1,6 +1,6 @@
 ## search in react using debounce
 
-check here [site running live](https://ark-searchlist.netlify.app/){:target="\_blank"}
+check here [site running live](https://ark-searchlist.netlify.app/)
 
 ### search functionality on a list of products in react using debounce
 
