@@ -1,4 +1,10 @@
-const SearchProduct = ({ search, setSearch, isSearching, foundData, call }) => {
+const SearchProduct = ({
+  search,
+  setSearch,
+  call,
+  foundData,
+  debouncedSearch,
+}) => {
   return (
     <section>
       <input
@@ -9,14 +15,14 @@ const SearchProduct = ({ search, setSearch, isSearching, foundData, call }) => {
         onChange={(e) => setSearch(e.target.value)}
       />
       &nbsp;
-      {isSearching ? "searching" : ""}
       <span>
-        {foundData === null
+        {debouncedSearch === ""
           ? ""
-          : foundData === 0
-          ? `no products`
+          : foundData && foundData.length === 0
+          ? `no products!`
           : foundData && foundData.length + ` products found...`}
       </span>
+      <hr />
       <span> called api {call} times</span>
       <hr />
     </section>
