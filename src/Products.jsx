@@ -16,8 +16,12 @@ const searchProducts = async (searchitem, setCount) => {
   if (searchitem === "") return list;
   setCount((c) => c + 1);
 
-  const found = list?.filter((prod) =>
-    prod.title.toLowerCase().match(searchitem.toLowerCase())
+  const found = list?.filter(
+    (prod) =>
+      prod.title.toLowerCase().match(searchitem.toLowerCase()) ||
+      prod.brand.toLowerCase().match(searchitem.toLowerCase()) ||
+      prod.category.toLowerCase().match(searchitem.toLowerCase()) ||
+      prod.description.toLowerCase().match(searchitem.toLowerCase())
   );
 
   return found;
